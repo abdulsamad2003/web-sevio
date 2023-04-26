@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  height: 100vh;
+  background-color: #23377e;
+}
+.top-page {
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+.bi-list {
+  display: none;
+  position: absolute;
+  top: 5%;
+  padding: 2px;
+  font-size: 25px;
+  color: #1c2973;
+  border-radius: 50%;
+  font-weight: 700;
+  background-color: #fff;
+  cursor: pointer;
+}
+#check {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2% 5%;
+  align-items: center;
+}
+.logo {
+  width: 139px;
+}
+.nav-links {
+  padding-left: 40px;
+  /* width: 100%; */
+}
+.nav-links a i {
+  display: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 15px;
+}
+label .bi {
+  display: none;
+}
+.btn {
+  display: flex;
+  padding: 0 10px;
+}
+.btn button {
+  text-transform: capitalize;
+  color: white;
+  width: 120px;
+  height: 45px;
+}
+.first-btn {
+  margin-right: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  border-radius: 5px;
+}
+.second-btn {
+  background: #6754e2;
+  box-shadow: 0px 6px 20px rgba(70, 55, 172, 0.4);
+  border-radius: 5px;
+  border: 1px solid #6754e2;
+}
+.header-content {
+  display: flex;
+  position: relative;
+  width: 100%;
+  top: 40px;
+}
+.content {
+  flex-basis: 49%;
+  display: block;
+  margin-left: 5%;
+  margin-top: 50px;
+  /* width: 100%; */
+}
+.mobiles {
+  display: flex;
+  padding-top: 40px;
+}
+.content h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 550;
+  padding-bottom: 20px;
+}
+.content p {
+  color: #eee;
+  font-size: 15px;
+  font-weight: 200;
+  width: 400px;
+  padding-bottom: 20px;
+  line-height: 20px;
+}
+.btn-install {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 750;
+  border-radius: 5px;
+  border: none;
+  color: #1c2973;
+  padding: 10px;
+  letter-spacing: 2px;
+}
+.content button {
+  width: 140px;
+  height: 40px;
+}
+.first-mob {
+  width: 360px;
+  margin-right: -80px;
+  margin-top: -30px;
+}
+.second-mob {
+  margin-top: 120px;
+  width: 330px;
+}
+
+@media (max-width: 1040px) {
+  .logo {
+    width: 120px;
+  }
+  .nav-links a {
+    font-size: 12px;
+  }
+  .btn button {
+    width: 95px;
+    height: 35px;
+  }
+  .content h1 {
+    font-size: 35px;
+  }
+  .content p {
+    font-size: 13px;
+    width: 330px;
+  }
+  .first-mob {
+    width: 280px;
+  }
+  .second-mob {
+    width: 250px;
+  }
+}
+@media (max-width: 952px) {
+  .logo {
+    width: 90px;
+  }
+  .nav-links {
+    padding-left: 10px;
+  }
+  .nav-links a {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+  .btn button {
+    width: 100px;
+    height: 35px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+  }
+  .nav-links {
+    padding-left: 15px;
+  }
+  .nav-links a {
+    font-size: 11px;
+    padding: 0 7px;
+  }
+  .btn button {
+    width: 85px;
+    height: 30px;
+    font-size: 10px;
+  }
+  .first-mob {
+    width: 200px;
+  }
+  .second-mob {
+    width: 180px;
+  }
+}
+@media (max-width: 680px) {
+  .top-page {
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+  }
+  .navbar {
+    justify-content: center;
+  }
+  .btn {
+    display: none;
+  }
+  .nav-links {
+    z-index: 111;
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    left: -800px;
+    background: linear-gradient(180deg, #23377e 0%, #4791c3 100%);
+    width: 80%;
+    transition: all 0.5s ease;
+  }
+  .nav-links a {
+    margin: 40px 30px;
+    display: block;
+    font-size: 17px;
+    padding: 10px 0;
+  }
+  label .bi {
+    position: absolute;
+    transition: all 0.5s ease;
+    display: block;
+  }
+  .nav-links a i {
+    display: inline;
+  }
+  .bi-list {
+    display: block;
+    left: 5%;
+    top: 4%;
+  }
+  .bi-x-lg {
+    top: 4%;
+    left: -65%;
+    color: #fff;
+    z-index: 1111;
+    font-size: 25px;
+  }
+  #check:checked ~ .nav-links {
+    left: 0;
+  }
+  #check:checked ~ label .bi-x-lg {
+    left: 65%;
+  }
+  .header-content {
+    display: block;
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 35px;
+  }
+  .content p {
+    font-size: 13px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  .mobiles{
+    display: none;
+  }
+  .second-mob{
+    margin: 0 0 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-page {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+}
